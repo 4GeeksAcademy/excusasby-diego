@@ -1,7 +1,6 @@
 /* eslint-disable */
 import "bootstrap";
 import "./style.css";
-
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
@@ -11,25 +10,24 @@ window.onload = () => {
   });
   console.log("Hello rigo from console!");
 };
+const generateExcuse = () => {
+  const pronoun = ["A", "The"];
+  const subject = [" dog", " grandma", " cat", " neighbor"];
+  const action = [" ate", " lost", " broke", " hid"];
+  const possession = [" my homework", " my keys", " my car", " my shoes"];
+  const where = [" in the park", " at home", " in my car", " at school"];
 
-let generateExcuse = () => {
-  let pronoun = ["A", "The"];
-  let subject = [" dog", " grandma", " cat", " neighbor", ""];
-  let action = [" ate", " lost", " broke", " hid"];
-  let possession = [" my homework", " my keys", " my car", " my shoes"];
-  let where = [" in the park", " at home", " in my car", " at school"];
-
-  let proINDEX = Math.floor(Math.random() * pronoun.length);
-  let subINDEX = Math.floor(Math.random() * subject.length);
-  let actINDEX = Math.floor(Math.random() * action.length);
-  let posINDEX = Math.floor(Math.random() * possession.length);
-  let wheINDEX = Math.floor(Math.random() * where.length);
+  let pronounIndex = Math.floor(Math.random() * pronoun.length);
+  let subjectIndex = Math.floor(Math.random() * subject.length);
+  let actIndex = Math.floor(Math.random() * action.length);
+  let possessionIndex = Math.floor(Math.random() * possession.length);
+  let whereIndex = Math.floor(Math.random() * where.length);
 
   return (
-    pronoun[proINDEX] +
-    subject[subINDEX] +
-    action[actINDEX] +
-    possession[posINDEX] +
-    where[wheINDEX]
+    pronoun[pronounIndex] +
+    subject[subjectIndex] +
+    action[actIndex] +
+    possession[possessionIndex] +
+    where[whereIndex]
   );
 };
